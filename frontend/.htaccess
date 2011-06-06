@@ -1,0 +1,17 @@
+<IfModule mod_headers.c>
+        Header unset ETag
+        FileETag None
+</IfModule>
+
+<IfModule mod_deflate.c>
+        AddOutputFilterByType DEFLATE text/html text/plain application/xml
+</IfModule>
+
+RewriteCond %{REQUEST_URI} !^/robots\.txt$
+RewriteCond %{REQUEST_URI} !^/favicon\.ico$
+RewriteCond %{REQUEST_URI} !^/sitemap\.xml$
+RewriteCond %{REQUEST_URI} !^/sitemap\.xml\.gz$
+RewriteCond %{REQUEST_URI} !^/labels\.rdf$
+RewriteCond %{REQUEST_URI} !^/LiveSearchSiteAuth\.xml$
+RewriteCond %{REQUEST_URI} !^/$
+RewriteRule ^.*$ index.php [L]
