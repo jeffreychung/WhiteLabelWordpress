@@ -16,3 +16,6 @@ To use the code, you need to set up multiple subdomains:
 * An administrative domain, where the actual Wordpress installation resides. This should be protected with a password.
 * A frontend domain, which holds the frontend code.
 * A static domain, where the CSS files and images are served from.
+
+First, install your WP on the administrative domain. Then copy the files from the frontend folder to your frontend
+location and set up your config.php. Finally, apply the plugins in the plugin folder and create your custom theme.
